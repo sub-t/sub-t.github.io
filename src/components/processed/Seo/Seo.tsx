@@ -3,19 +3,19 @@ import { DefaultSeo } from 'next-seo';
 export const Seo = () => (
   <>
     <DefaultSeo
-      defaultTitle="blog"
+      defaultTitle="subt blog"
       description="blog"
       openGraph={{
         type: 'website',
-        title: 'blog',
+        title: 'subt blog',
         description: 'blog',
-        site_name: 'blog',
+        site_name: 'sub-t.github.io',
         url: process.env.NEXT_PUBLIC_ROOT_URL,
         images: [
           {
             url: '/assets/author.png',
-            width: 800,
-            height: 600,
+            width: 512,
+            height: 512,
             alt: 'Og Image Alt',
             type: 'image/png',
           },
@@ -50,6 +50,12 @@ export const Seo = () => (
           rel: 'mask-icon',
           href: '/favicons/safari-pinned-tab.svg',
           color: '#5bbad5',
+        },
+      ]}
+      additionalMetaTags={[
+        {
+          name: 'msapplication-TileImage',
+          content: '/favicons/mstile-150x150.png',
         },
       ]}
     />
