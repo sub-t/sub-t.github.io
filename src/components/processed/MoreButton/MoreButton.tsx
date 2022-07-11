@@ -25,7 +25,7 @@ export const MoreButton = () => (
     initial="initial"
     whileHover="hover"
   >
-    <div className="center gap-2 py-3 px-4 rounded-lg text-md font-normal bg-teal-700 text-white">
+    <div className="btn">
       <div className="w-10"></div>
       もっと見る
       <div className="hstack">
