@@ -4,7 +4,6 @@ import { Post } from '@/components/processed/Post';
 import { Profile } from '@/components/processed/Profile';
 import { Toc } from '@/components/processed/Toc';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
-import { useRootPath } from '@/hooks/useRootPath';
 import { PostType } from '@/types/post';
 
 type Props = {
@@ -13,7 +12,6 @@ type Props = {
 
 export const Posts: React.VFC<Props> = ({ post }) => {
   const lg = useBreakPoint('lg');
-  const rootPath = useRootPath();
 
   return (
     <Contents
@@ -28,7 +26,7 @@ export const Posts: React.VFC<Props> = ({ post }) => {
               description: post.excerpt,
               images: [
                 {
-                  url: rootPath + post.ogImage.url,
+                  url: post.ogImage.url,
                 },
               ],
             }}
