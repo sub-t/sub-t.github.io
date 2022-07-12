@@ -1,12 +1,11 @@
-import { RiMenu4Line } from 'react-icons/ri';
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from '@/components/material/DropdownMenu';
 import { Link } from '@/components/material/Link';
-import { links } from '../../../config/links';
+import { links } from '@/config/links';
+import { Trigger } from './Trigger';
 
 type Props = {
   children?: React.ReactNode;
@@ -15,14 +14,7 @@ type Props = {
 export const Hamburger: React.VFC<Props> = ({ children }) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <button
-          className="icon-btn rounded-full bg-white dark:bg-black shadow-xl"
-          aria-label="hamburger menu"
-        >
-          <RiMenu4Line size={28} />
-        </button>
-      </DropdownMenuTrigger>
+      <Trigger />
       <DropdownMenuContent
         sideOffset={8}
         collisionTolerance={16}
