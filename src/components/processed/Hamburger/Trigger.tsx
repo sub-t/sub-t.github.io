@@ -3,8 +3,6 @@ import { MdDragIndicator } from 'react-icons/md';
 import { RiMenu4Line } from 'react-icons/ri';
 import { DropdownMenuTrigger } from '@/components/material/DropdownMenu';
 
-const MotionIndicator = motion(MdDragIndicator);
-
 const TriggerVariants: Variants = {
   initial: {},
   hover: {},
