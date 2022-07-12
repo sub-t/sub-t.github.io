@@ -1,7 +1,6 @@
 import { AiTwotoneTags } from 'react-icons/ai';
-import { Image } from '@/components/material/Image';
-import { Link } from '@/components/material/Link';
-import { Date } from '../Date';
+import { Link } from '@/components/common/Link';
+import { Date } from '../../../common/Date';
 
 type Props = {
   title: string;
@@ -14,9 +13,9 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
   return (
     <div className="vstack gap-4">
       <div className="w-full h-64 sm:h-80">
-        <Image
+        <img
           src={coverImage}
-          alt={`Cover Image for ${title}`}
+          alt={title}
           className="w-full h-full object-cover"
         />
       </div>

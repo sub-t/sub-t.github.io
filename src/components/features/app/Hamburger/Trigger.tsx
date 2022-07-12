@@ -1,7 +1,7 @@
 import { motion, Variants } from 'framer-motion';
 import { MdDragIndicator } from 'react-icons/md';
 import { RiMenu4Line } from 'react-icons/ri';
-import { DropdownMenuTrigger } from '@/components/material/DropdownMenu';
+import { DropdownMenuTrigger } from '@/components/common/DropdownMenu';
 
 const TriggerVariants: Variants = {
   initial: {},

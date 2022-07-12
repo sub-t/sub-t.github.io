@@ -2,8 +2,8 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-} from '@/components/material/DropdownMenu';
-import { Link } from '@/components/material/Link';
+} from '@/components/common/DropdownMenu';
+import { Link } from '@/components/common/Link';
 import { links } from '@/config/links';
 import { Trigger } from './Trigger';
 

@@ -1,6 +1,5 @@
-import { Image } from '@/components/material/Image';
-import { Link } from '@/components/material/Link';
-import { Date } from '../Date';
+import { Link } from '@/components/common/Link';
+import { Date } from '../../../common/Date';
 
 type Props = {
   title: string;
@@ -15,9 +14,9 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
     <Link href={`/posts/${slug}`}>
       <a className="select-none overflow-hidden w-full h-full vstack md:flex-row cursor-pointer focus:outline-2 ">
         <div className="center w-full md:w-1/3 h-52 md:h-full bg-neutral-50 md:bg-transparent">
-          <Image
+          <img
             src={coverImage}
-            alt={`Cover Image for ${title}`}
+            alt={title}
             className="w-full max-w-xs h-full object-cover"
           />
         </div>

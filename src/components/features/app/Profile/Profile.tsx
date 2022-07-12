@@ -1,10 +1,9 @@
-import { Image } from '@/components/material/Image';
-import { sns } from '../../../config/sns';
+import { sns } from '@/config/sns';
 
 export const Profile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-1">
     <div className="vstack items-center gap-2">
-      <Image
+      <img
         className="object-cover w-28 h-28 rounded-full bg-white"
         alt="subt avatar"
         src="/assets/author.png"

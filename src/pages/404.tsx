@@ -1,4 +1,4 @@
-import { Link } from '@/components/material/Link';
+import { Link } from '@/components/common/Link';
 
 const View = () => (
   <div className="vstack items-center p-8 bg-primary-1">
