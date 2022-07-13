@@ -14,51 +14,54 @@ export const Posts: React.VFC<Props> = ({ post }) => {
   const lg = useBreakPoint('lg');
 
   return (
-    <Contents
-      main={
-        <article>
-          <NextSeo
-            title={post.title}
-            description={post.excerpt}
-            openGraph={{
-              url: process.env.NEXT_PUBLIC_ROOT_URL,
-              title: post.title,
-              description: post.excerpt,
-              images: [
-                {
-                  url: post.ogImage.url,
-                },
-              ],
-            }}
-          />
-          <Post post={post} />
-        </article>
-      }
-      aside={
-        <div className="vstack gap-6 h-full">
-          <Profile />
-          {lg && (
-            <div className="sticky top-20">
-              <Toc />
-            </div>
-          )}
-        </div>
-      }
-      hamburgerMenu={
-        <div
-          role="button"
-          tabIndex={0}
-          onClick={() =>
-            document.dispatchEvent(
-              new KeyboardEvent('keydown', { key: 'Escape' }),
-            )
-          }
-          onKeyDown={() => {}}
-          className="overflow-y-auto cursor-default"
-        >
-          <Toc />
-        </div>
-      }
-    />
+    <>
+      <NextSeo
+        title={post.title}
+        description={post.excerpt}
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_ROOT_URL,
+          title: post.title,
+          description: post.excerpt,
+          images: [
+            {
+              url: post.ogImage.url,
+            },
+          ],
+        }}
+      />
+
+      <Contents
+        main={
+          <article>
+            <Post post={post} />
+          </article>
+        }
+        aside={
+          <div className="vstack gap-6 h-full">
+            <Profile />
+            {lg && (
+              <div className="sticky top-20">
+                <Toc />
+              </div>
+            )}
+          </div>
+        }
+        hamburgerMenu={
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() =>
+              document.dispatchEvent(
+                new KeyboardEvent('keydown', { key: 'Escape' }),
+              )
+            }
+            onKeyDown={() => {}}
+            className="overflow-y-auto cursor-default"
+          >
+            <Toc />
+          </div>
+        }
+      />
+    </>
   );
 };
