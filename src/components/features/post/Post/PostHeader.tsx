@@ -1,6 +1,6 @@
 import { AiTwotoneTags } from 'react-icons/ai';
+import { Date } from '@/components/common/Date';
 import { Link } from '@/components/common/Link';
-import { Date } from '../../../common/Date';
 
 type Props = {
   title: string;
