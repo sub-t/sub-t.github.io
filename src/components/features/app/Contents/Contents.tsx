@@ -3,7 +3,7 @@ import { FloatHamburger } from './FloatHamburger';
 
 type Props = {
   main: React.ReactElement;
-  aside: React.ReactNode;
+  aside?: React.ReactNode;
   hamburgerMenu?: React.ReactNode;
 };
 
