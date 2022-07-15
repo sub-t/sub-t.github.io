@@ -40,8 +40,8 @@ export const Posts: React.VFC<Props> = ({ post }) => {
         aside={
           <div className="vstack gap-10 h-full">
             <Profile />
-            <div className="vstack gap-10 sticky top-20">
-              {lg && <Toc />}
+            <div className="sticky top-20 vstack gap-8">
+              <div className="overflow-y-auto max-h-80">{lg && <Toc />}</div>
               <Share post={post} />
             </div>
           </div>
