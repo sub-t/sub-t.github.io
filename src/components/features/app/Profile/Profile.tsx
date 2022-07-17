@@ -1,3 +1,4 @@
+import { Link } from '@/components/common/Link';
 import { sns } from '@/config/sns';
 
 export const Profile = () => (
@@ -17,10 +18,12 @@ export const Profile = () => (
     </p>
 
     <div className="flex gap-4">
-      {sns.map(({ icon }, idx) => (
-        <div key={idx} className="text-primary-1">
-          {icon}
-        </div>
+      {sns.map(({ href, icon }) => (
+        <Link key={href} href={href} passHref>
+          <a className="text-primary-1">
+            {icon}
+          </a>
+        </Link>
       ))}
     </div>
   </div>
