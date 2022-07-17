@@ -26,7 +26,7 @@ export const Posts: React.VFC<Props> = ({ post }) => {
           description: post.excerpt,
           images: [
             {
-              url: post.ogImage.url,
+              url: ROOT_URL + post.ogImage.url,
             },
           ],
         }}

@@ -1,4 +1,5 @@
 import { DefaultSeo } from 'next-seo';
+import { ROOT_URL } from '@/config/app';
 
 export const Seo = () => (
   <>
@@ -10,10 +11,10 @@ export const Seo = () => (
         title: 'subt blog',
         description: 'blog',
         site_name: 'sub-t.github.io',
-        url: process.env.NEXT_PUBLIC_ROOT_URL,
+        url: ROOT_URL,
         images: [
           {
-            url: '/assets/author.png',
+            url: ROOT_URL + '/assets/author.png',
             width: 512,
             height: 512,
             alt: 'Og Image Alt',
