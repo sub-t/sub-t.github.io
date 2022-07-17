@@ -1,5 +1,6 @@
 import { DefaultSeo } from 'next-seo';
 import { ROOT_URL } from '@/config/app';
+import { joinPath } from '@/lib/joinPath';
 
 export const Seo = () => (
   <>
@@ -14,7 +15,7 @@ export const Seo = () => (
         url: ROOT_URL,
         images: [
           {
-            url: ROOT_URL + '/assets/author.png',
+            url: joinPath(ROOT_URL, '/assets/author.png'),
             width: 512,
             height: 512,
             alt: 'Og Image Alt',
