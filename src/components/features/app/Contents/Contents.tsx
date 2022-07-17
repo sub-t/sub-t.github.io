@@ -1,6 +1,7 @@
+import { Portal } from '@radix-ui/react-portal';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
 import { cn } from '@/lib/cn';
-import { FloatHamburger } from './FloatHamburger';
+import { Hamburger } from '../Hamburger';
 
 type Props = {
   main: React.ReactElement;
@@ -23,7 +24,13 @@ export const Contents: React.VFC<Props> = ({
         <main>{main}</main>
       </div>
       <aside>{aside}</aside>
-      {lg || <FloatHamburger hamburgerMenu={hamburgerMenu} />}
+      {lg || (
+        <Portal>
+          <div className="fixed left-8 bottom-8">
+            <Hamburger>{hamburgerMenu}</Hamburger>
+          </div>
+        </Portal>
+      )}
     </div>
   );
 };
