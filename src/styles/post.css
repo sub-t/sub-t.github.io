@@ -37,7 +37,7 @@
   @apply whitespace-pre m-0 p-0 text-[13px] sm:text-sm text-inherit bg-transparent dark:text-inherit dark:bg-transparent !important;
 }
 
-.code-container {
+.code-wrapper {
   @apply overflow-x-auto;
 }
 

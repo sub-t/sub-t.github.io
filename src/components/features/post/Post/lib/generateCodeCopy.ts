@@ -1,42 +1,42 @@
-const copyButtonLabel = 'Copy';
+const label = {
+  copy: 'Copy',
+  copied: 'Copied!',
+};
 
 export const generateCodeCopy = () => {
   if (typeof window !== 'object') return;
 
-  const blocks = document.querySelectorAll('pre');
+  const pres = document.querySelectorAll('pre');
 
-  blocks.forEach((block) => {
+  pres.forEach((pre) => {
     if (navigator.clipboard) {
-      addContainer(block);
-      addButton(block);
+      wrapCode(pre);
+      addButton(pre);
     }
   });
 };
 
-const addContainer = (block: HTMLPreElement) => {
-  const container = document.createElement('div');
-  container.setAttribute('class', 'code-container');
-  const children = block.firstChild!;
-  block.appendChild(container.appendChild(children));
+const wrapCode = (pre: HTMLPreElement) => {
+  const code = pre.innerHTML;
+  const wrappedCode = '<div class="code-wrapper">' + code + '</div>';
+  pre.innerHTML = wrappedCode;
 };
 
-const addButton = (block: HTMLPreElement) => {
+const addButton = (pre: HTMLPreElement) => {
   const button = document.createElement('button');
-  button.innerText = copyButtonLabel;
+  button.innerText = label.copy;
   button.addEventListener('click', copyCode);
-  block.appendChild(button);
+  pre.appendChild(button);
 };
 
 const copyCode = async (event: MouseEvent) => {
   const button = event.target as HTMLButtonElement;
-  const pre = button.closest('pre')!;
-  const code = pre.querySelector('code')!;
-  const text = code.innerText;
+  const text = button.parentNode!.querySelector('code')!.innerText;
   await navigator.clipboard.writeText(text);
 
-  button.innerText = 'Copied!';
+  button.innerText = label.copied;
 
   setTimeout(() => {
-    button.innerText = copyButtonLabel;
+    button.innerText = label.copy;
   }, 1000);
 };
