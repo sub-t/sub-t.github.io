@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { generateCodeCopy } from './lib/generateCodeCopy';
 import markdownStyles from './styles/markdown-styles.module.css';
 
 type Props = {
@@ -5,6 +7,10 @@ type Props = {
 };
 
 export const PostBody = ({ content }: Props) => {
+  useEffect(() => {
+    generateCodeCopy();
+  }, []);
+
   return (
     <div className="post">
       <div
