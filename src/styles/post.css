@@ -33,6 +33,10 @@
   @apply whitespace-nowrap font-mono mx-[2px] py-[2px] px-[3px] rounded-sm text-teal-900 bg-teal-100 dark:text-teal-100 dark:bg-teal-900 !important;
 }
 
+.post .rehype-code-title {
+  @apply inline badge
+}
+
 .post pre code {
   @apply whitespace-pre m-0 p-0 text-[13px] sm:text-sm text-inherit bg-transparent dark:text-inherit dark:bg-transparent !important;
 }
@@ -42,9 +46,5 @@
 }
 
 .post pre {
-  @apply relative p-4 mb-9 rounded-md !important;
-}
-
-.post button {
-  @apply absolute top-2 right-2 py-1 px-2 rounded-md font-sans text-neutral-300 hover:bg-neutral-700 !important;
+  @apply p-4 mb-9 rounded-md !important;
 }

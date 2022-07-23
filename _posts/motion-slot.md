@@ -82,7 +82,7 @@ const MotionComponent = motion(Component);
 
 ### 実装
 
-```tsx
+```tsx:Enter.tsx
 import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { motion } from 'framer-motion';
